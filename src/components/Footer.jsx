@@ -13,20 +13,28 @@ const Footer = () => {
     <footer className={`bg-gray-900 text-white py-10 ${themeClass}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-center">
-          <Link to="https://www.linkedin.com/in/guillermonunezfullstackwebdeveloperjr/">
+          <a
+            href="https://www.linkedin.com/in/guillermonunezfullstackwebdeveloperjr/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="https://skillicons.dev/icons?i=linkedin"
               alt="LinkedIn"
               className="w-6 h-6 mr-4"
             />
-          </Link>
-          <Link to="https://github.com/TheTorOnionSeeker">
+          </a>
+          <a
+            href="https://github.com/TheTorOnionSeeker"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="https://skillicons.dev/icons?i=github"
               alt="GitHub"
-              className="w-6 h-6"
+              className="w-6 h-6 mr-4"
             />
-          </Link>
+          </a>
         </div>
       </div>
     </footer>

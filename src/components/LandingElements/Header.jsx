@@ -34,10 +34,12 @@ export const Header = () => {
         <div className="flex lg:flex-1">
           <a
             href="/"
-            className="-m-1.5 p-2 bg-[#E60011] text-white font-semibold rounded-sm"
+            className={`${darkTheme?"bg-gray-900":"bg-white"} -m-1.5 p-2 text-white font-semibold rounded-sm`}
           >
             <span className="sr-only">Your Company</span>
-            <h1>Home</h1>
+            <button className="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded">
+              Home
+            </button>
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -57,7 +59,9 @@ export const Header = () => {
               {item.path ? (
                 <Link
                   to={item.path}
-                  className="text-base font-semibold leading-6 text-[#484848] hover:text-[#E60011]"
+                  className={`${
+                    darkTheme ? "text-white" : "text-gray-500"
+                  } text-base font-semibold leading-6 hover:text-indigo-500`}
                 >
                   {item.name}
                 </Link>

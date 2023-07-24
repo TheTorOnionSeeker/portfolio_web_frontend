@@ -8,27 +8,21 @@ export default function Details() {
     image: "https://i.postimg.cc/hv6qpbrY/Profile-Image.jpg",
     role: "Fullstack Web Developer",
     education: [
-      "Fullstack Web Developer at I.N.T.I.",
       "Fullstack Web Developer at SoyHenry",
+      ".NET Developer at EducacionIT",
+      "Fullstack Web Developer at I.N.T.I.",
     ],
-    skills: [
-      "Java",
-      "Springboot",
-      "React",
-      "JavaScript",
-      "Redux",
-      "Node.js",
-      "Express",
-      "MySQL",
-      "MongoDB(with mongoose)",
-      "HTML",
-      "CSS",
-      "Bootstrap",
+    educacion: [
+      "Desarrollador Web Fullstack en SoyHenry",
+      "Desarrollador .NET en EducacionIT",
+      "Desarrollador Web Fullstack en I.N.T.I.",
     ],
     projects: [
-      "https://tour-de-viajes-y-compras-javier.netlify.app",
-      "https://rick-and-m0rty.netlify.app/",
       "https://your-gammer-tech.vercel.app/",
+      "https://portfolio-web-guillermo-nunez.vercel.app/",
+      "https://deploy-portfolio-web-backend-express.onrender.com/api/person/details",
+      "https://tour-de-viajes-y-compras-javier.netlify.app/",
+      "https://rick-and-m0rty.netlify.app/"
     ],
     hard_skills: [
       "Java",
@@ -45,7 +39,26 @@ export default function Details() {
       "CSS",
       "Bootstrap",
     ],
-    languages: ["english", "portuguese"],
+    habilidades_tecnicas: [
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "JavaScript",
+      "Redux",
+      "PostgreSQL",
+      "TailwindCSS",
+      ".NET",
+      "C#",
+      "Java",
+      "Springboot",
+      "MySQL",
+      "MongoDB(with mongoose)",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+    ],
+    languages: ["English", "Portuguese"],
+    idiomas: ["Inglés", "Portugués"],
     percentage_hard_skills: [
       80, 80, 90, 90, 90, 90, 90, 70, 70, 80, 90, 70, 70,
     ],
@@ -57,6 +70,15 @@ export default function Details() {
       "results-oriented profile",
       "customer orientation",
       "ability to resolve highly complex situations",
+    ],
+    habilidades_blandas: [
+      "Proactividad",
+      "trabajo colaborativo",
+      "flexibilidad y adaptabilidad",
+      "autodidacta",
+      "perfil orientado a resultados",
+      "orientación al cliente",
+      "capacidad de resolución de situaciones de alta complejidad",
     ],
   };
 
@@ -109,8 +131,27 @@ export default function Details() {
             </div>
             {/* Agrega más tarjetas para mostrar otros campos según sea necesario */}
           </div>
-          {renderCard("Educación", characterDetails.education.join(", "))}
-          {renderCard("Habilidades", characterDetails.skills.join(", "))}
+          <div className="bg-indigo-500 hover:bg-indigo-600 rounded shadow p-4 mb-4">
+            <p className="font-bold mb-1">
+              {renderCard("Educación:", characterDetails.educacion.join(", "))}
+            </p>
+          </div>
+          <div className="bg-indigo-500 hover:bg-indigo-600 rounded shadow p-4 mb-4">
+            <p className="font-bold mb-1">
+              {renderCard(
+                "Habilidades técnicas:",
+                characterDetails.habilidades_tecnicas.join(", ")
+              )}
+            </p>
+          </div>
+          <div className="bg-indigo-500 hover:bg-indigo-600 rounded shadow p-4 mb-4">
+            <p className="font-bold mb-1">
+              {renderCard(
+                "Habilidades blandas:",
+                characterDetails.habilidades_blandas.join(", ")
+              )}
+            </p>
+          </div>
         </div>
       </div>
     </>

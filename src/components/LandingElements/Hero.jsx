@@ -28,7 +28,7 @@ export const Hero = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     width: "100%",
-    height: "75.25vh",
+    height: "74.7vh",
   };
 
   const { darkTheme } = useContext(ThemeContext);
